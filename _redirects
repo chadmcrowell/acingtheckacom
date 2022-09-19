@@ -1,0 +1,14 @@
+# this is an example '_redirect' file
+# examples below if your domain is 'chz.com'
+
+# chz.com/foo will redirect to https://exmaple.com/foo
+/foo       https://example.com/foo
+
+# chz.com/example will redirect to https://example.com
+/example   https://example.com
+
+# chz.com/github will redirect to https://github.com/chz
+/github    https://github.com/chz
+
+# chz.com will redirect to google.com
+/*         https://google.com

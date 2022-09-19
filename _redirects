@@ -1,15 +1,11 @@
-/rYZn8     https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam?utm_source=acingthecka&utm_medium=affiliate&utm_campaign=book_crowell_acing_6_8_22&a_aid=acingthecka&a_bid=5502c16b
-# this is an example '_redirect'file
-# examples below if your domain is'chz.com'
-
-# chz.com/foo will redirect tohttps://exmaple.com/foo
+# acingthecka.com/foo will redirect to https://exmaple.com/foo
 /foo       https://example.com/foo
 
-# chz.com/example will redirect tohttps://example.com
+# acingthecka.com/example will redirect to https://example.com
 /example   https://example.com
 
-# chz.com/github will redirect tohttps://github.com/chz
+# acingthecka.com/github will redirect to https://github.com/chz
 /github    https://github.com/chadmcrowell
 
-# chz.com will redirect togoogle.com
+# acingthecka.com will redirect to https://manning.com/books/acing...
 /*         https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam?utm_source=acingthecka&utm_medium=affiliate&utm_campaign=book_crowell_acing_6_8_22&a_aid=acingthecka&a_bid=5502c16b

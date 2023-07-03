@@ -1,11 +1,12 @@
-# acingthecka.com/foo will redirect to https://exmaple.com/foo
+/project   https://www.manning.com/liveprojectseries/cka-exam-hands-on-practice-ser?utm_source=acingthecka&utm_medium=affiliate&utm_campaign=liveproject_crowell_levan_cka_6_30_23&a_aid=acingthecka&a_bid=14d38546
+# acingthecka.com/foo will redirect tohttps://exmaple.com/foo
 /foo       https://example.com/foo
 
-# acingthecka.com/example will redirect to https://example.com
+# acingthecka.com/example will redirect tohttps://example.com
 /example   https://example.com
 
-# acingthecka.com/github will redirect to https://github.com/chz
+# acingthecka.com/github will redirect tohttps://github.com/chz
 /github    https://github.com/chadmcrowell
 
-# acingthecka.com will redirect to https://manning.com/books/acing...
+# acingthecka.com will redirect tohttps://manning.com/books/acing...
 /*         https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam?utm_source=acingthecka&utm_medium=affiliate&utm_campaign=book_crowell_acing_6_8_22&a_aid=acingthecka&a_bid=5502c16b

@@ -1,131 +1,168 @@
-/* ---------- General ---------- */
+/* ===== Base (mobile-first) ===== */
+:root {
+  --bg: #fafafa;
+  --fg: #222;
+  --muted: #555;
+  --brand: #007acc;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
 body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    margin: 0;
-    background: #fafafa;
-    color: #222;
-  }
-  
-  /* ---------- Header ---------- */
-  header {
-    text-align: center;
-    padding: 3rem 1rem 2rem;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  }
-  
-  header img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  h1 {
-    margin: 0.5rem 0;
-    font-size: 1.8rem;
-  }
-  
-  p.tagline {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .cta {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 1.25rem;
-    background: #007acc;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  /* ---------- Main ---------- */
-  main {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    line-height: 1.6;
-  }
-  
-  /* ---------- Authors ---------- */
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  /* Fluid type: 16px on small, up to 18px on large */
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===== Header / Hero ===== */
+header {
+  text-align: center;
+  padding: 24px 16px 16px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+header img {
+  /* shrink a bit on phones, never overflow */
+  width: 60vw;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 12px;
+  display: block;
+  border-radius: var(--radius);
+}
+
+h1 {
+  margin: 8px 0 6px;
+  font-size: clamp(22px, 5.5vw, 30px);
+  line-height: 1.25;
+}
+
+p.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(14px, 3.8vw, 18px);
+}
+
+/* CTA = full width on mobile for easier tapping */
+.cta {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 14px auto 0;
+  padding: 14px 16px;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,122,204,.18);
+}
+.cta:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+
+/* ===== Main content ===== */
+main {
+  max-width: 860px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+h2 { 
+  margin: 0 0 10px;
+  font-size: clamp(18px, 4.2vw, 24px);
+}
+h3 {
+  margin: 8px 0 4px;
+  font-size: clamp(16px, 3.8vw, 20px);
+}
+
+/* ===== Authors section ===== */
+section.authors {
+  display: grid;
+  grid-template-columns: 1fr;     /* stack on phones */
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.author {
+  text-align: center;
+  padding: 16px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.author img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.author p {
+  margin: 6px 0 0;
+  color: #333;
+}
+
+/* Social icons: larger, comfy spacing */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social a {
+  display: inline-flex;
+  padding: 8px;                 /* bigger tap target */
+  border-radius: 50%;
+}
+
+.social a svg {
+  width: 26px;
+  height: 26px;
+  fill: #0077b5;                /* LinkedIn default */
+  transition: transform .15s ease, opacity .15s ease;
+}
+.social a.youtube svg { fill: #ff0000; }
+.social a:hover svg { transform: translateY(-1px); opacity: .9; }
+.social a:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 24px 16px 40px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ===== Tablet+ tweaks ===== */
+@media (min-width: 640px) {
+  header { padding: 40px 20px 24px; }
+  .cta { display: inline-block; width: auto; padding: 12px 18px; }
   section.authors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 3rem;
+    grid-template-columns: repeat(2, minmax(260px, 1fr)); /* 2 columns */
+    gap: 22px;
   }
-  
-  .author {
-    flex: 1 1 300px;
-    text-align: center;
-  }
-  
-  .author img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* ---------- Social Icons ---------- */
-  .social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-  
-  .social a svg {
-    width: 24px;
-    height: 24px;
-    fill: #0077b5;
-    transition: opacity 0.2s ease;
-  }
-  
-  .social a.youtube svg {
-    fill: #ff0000;
-  }
-  
-  .social a:hover svg {
-    opacity: 0.7;
-  }
-  
-  /* ---------- Footer ---------- */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  
-  /* ---------- Responsive ---------- */
-  @media (max-width: 640px) {
-    body { font-size: 17px; }
-    header { padding: 2rem 1rem 1.5rem; }
-    header img { max-width: 160px; }
-  
-    .cta {
-      display: block;
-      width: 100%;
-      max-width: 420px;
-      margin: 1rem auto 0;
-      text-align: center;
-      padding: 0.9rem 1.2rem;
-      border-radius: 6px;
-    }
-  
-    main { margin: 2rem auto; padding: 0 1rem; }
-    section.authors { gap: 1.5rem; }
-  
-    .author img { width: 112px; height: 112px; }
-    .social { gap: 1.25rem; }
-    .social a svg { width: 28px; height: 28px; }
-  
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.25rem; }
-    h3 { font-size: 1.05rem; }
-  }
-  
+}
+
+/* ===== Desktop+ ===== */
+@media (min-width: 1024px) {
+  header img { max-width: 240px; }
+  main { margin: 36px auto; }
+  section.authors { gap: 26px; }
+}

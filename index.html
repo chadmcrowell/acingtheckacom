@@ -5,72 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Acing the Certified Kubernetes Administrator Exam</title>
   <link rel="icon" href="/favicon.ico" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      margin: 0;
-      background: #fafafa;
-      color: #222;
-    }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    header img {
-      max-width: 200px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      margin: 0.5rem 0;
-      font-size: 1.8rem;
-    }
-    p.tagline {
-      font-size: 1rem;
-      color: #555;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.25rem;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-    }
-    section.authors {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 3rem;
-    }
-    .author {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    .author img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -93,11 +28,35 @@
         <img src="/chad-crowell.jpeg" alt="Chad M. Crowell">
         <h3>Chad M. Crowell</h3>
         <p>Principal Site Reliability Engineer at Akamai and CNCF Ambassador. Author, educator, and Kubernetes community leader.</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/chadmccrowell" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 0h-14a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5v-14a5 5 0 0 0-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.78-1.75-1.75S5.53 4.2 6.5 4.2s1.75.78 1.75 1.75S7.47 7.7 6.5 7.7zm13.5 11.3h-3v-5c0-1.2-.02-2.8-1.7-2.8s-2 1.3-2 2.7v5.1h-3v-10h2.9v1.4h.04c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.6v5.7z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@KubeSkills" target="_blank" class="youtube" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h-.1s-5.6 0-8.6.3c-.4.1-1.3.1-2.1 1C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.3v1.9c0 2.1.5 4.1.5 4.1s.2 1.7.8 2.4c.8.9 1.9.9 2.4 1 1.8.1 7.5.3 7.5.3s5.6 0 8.6-.3c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.4.8-2.4s.5-2 .5-4.1v-1.9c0-2.1-.5-4.1-.5-4.1zM9.6 14.9V8.6l6.3 3.1-6.3 3.2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
       <div class="author">
-        <img src="/rafael-brito.jpeg" alt="Rafael Brito">
+        <img src="/rafa-brito.jpeg" alt="Rafael Brito">
         <h3>Rafael Brito</h3>
         <p>Rafael “Rafa” Brito is a Principal Engineer at StormForge by CloudBolt and is recognized as a Kubernetes developer, engineer, speaker, and community organizer. Before his current position, he was a Staff Engineer at VMware and the Senior Vice President and Global Containers Lead at Citigroup. He graduated with an M.B.A. in e-business from Pace University.</p>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/rafaelbrito/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 0h-14a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5v-14a5 5 0 0 0-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.78-1.75-1.75S5.53 4.2 6.5 4.2s1.75.78 1.75 1.75S7.47 7.7 6.5 7.7zm13.5 11.3h-3v-5c0-1.2-.02-2.8-1.7-2.8s-2 1.3-2 2.7v5.1h-3v-10h2.9v1.4h.04c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.6v5.7z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@KubeSkills" target="_blank" class="youtube" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h-.1s-5.6 0-8.6.3c-.4.1-1.3.1-2.1 1C.7 4.5.5 6.2.5 6.2S0 8.2 0 10.3v1.9c0 2.1.5 4.1.5 4.1s.2 1.7.8 2.4c.8.9 1.9.9 2.4 1 1.8.1 7.5.3 7.5.3s5.6 0 8.6-.3c.4-.1 1.3-.1 2.1-1 .6-.7.8-2.4.8-2.4s.5-2 .5-4.1v-1.9c0-2.1-.5-4.1-.5-4.1zM9.6 14.9V8.6l6.3 3.1-6.3 3.2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   </main>

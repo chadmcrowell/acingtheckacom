@@ -3,18 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Acing the CKA</title>
+  <title>Acing the Certified Kubernetes Administrator Exam</title>
   <link rel="icon" href="/favicon.ico" />
   <style>
-    body { font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
-    main { max-width: 720px; margin: 0 auto; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0.5rem 0;
+      font-size: 1.8rem;
+    }
+    p.tagline {
+      font-size: 1rem;
+      color: #555;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    section.authors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    .author {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .author img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <img src="/book-cover.png" alt="Book cover of Acing the Certified Kubernetes Administrator Exam">
+    <h1>Acing the Certified Kubernetes Administrator Exam</h1>
+    <p class="tagline">A hands-on guide to mastering Kubernetes administration</p>
+    <a class="cta" href="https://www.manning.com/books/acing-the-certified-kubernetes-administrator-exam?a_aid=acingthecka">Buy the Book</a>
+  </header>
+
   <main>
-    <h1>Acing the CKA</h1>
-    <p>Welcome. This is the official homepage.</p>
-    <p><a href="https://blog.kubeskills.com/supercharge-github">Latest post</a></p>
+    <h2>About the Book</h2>
+    <p>
+      This book walks you through everything you need to pass the CKA exam with confidence.
+      You’ll learn Kubernetes from the ground up through practical labs, real-world examples, and clear explanations.
+    </p>
+
+    <section class="authors">
+      <div class="author">
+        <img src="/chad-crowell.jpeg" alt="Chad M. Crowell">
+        <h3>Chad M. Crowell</h3>
+        <p>Principal Site Reliability Engineer at Akamai and CNCF Ambassador. Author, educator, and Kubernetes community leader.</p>
+      </div>
+      <div class="author">
+        <img src="/rafael-brito.jpeg" alt="Rafael Brito">
+        <h3>Rafael Brito</h3>
+        <p>Rafael “Rafa” Brito is a Principal Engineer at StormForge by CloudBolt and is recognized as a Kubernetes developer, engineer, speaker, and community organizer. Before his current position, he was a Staff Engineer at VMware and the Senior Vice President and Global Containers Lead at Citigroup. He graduated with an M.B.A. in e-business from Pace University.</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    © 2025 AcingTheCKA.com · Published by <a href="https://www.manning.com">Manning Publications</a>
+  </footer>
+
 </body>
 </html>
